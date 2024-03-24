@@ -1,3 +1,3 @@
-public class Hit {
+public class Hit extends Game{
     
 }

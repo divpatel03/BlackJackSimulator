@@ -1,3 +1,3 @@
-public class InitialDeal {
+public class InitialDeal extends Game{
 
 }
