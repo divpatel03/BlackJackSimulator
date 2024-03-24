@@ -2,16 +2,10 @@ import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) {
-        int firstInput = 0;
-        startGame(firstInput);
-        if(firstInput == 0) {
-            System.out.println("Game Over");
-            System.exit(0);
-        }
+        int firstInput = 1;
 
-        //Change this later so it can reprompt the user
-        else if(firstInput != 1 || firstInput != 0) {
-            System.out.println("Error, Invalid Input!");
+        if(startGame(firstInput) == 0) {
+            System.out.println("Game Over");
             System.exit(0);
         }
         else {
@@ -21,15 +15,20 @@ public class Game {
     }
 
     public static int startGame(int firstInput) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("--------------------------------------");
         System.out.println("Would you like to begin?");
         System.out.println("--------------------------------------");
-        System.out.println("Enter 1 for Yes");
-        System.out.println("Enter 0 for No");
-        Scanner scanner = new Scanner(System.in);
-        firstInput = scanner.nextInt();
+        System.out.println("Enter 1 for Yes || Enter 0 for No");
+        System.out.println("--------------------------------------");
+        firstInput = scanner.nextInt();  
 
-        return firstInput;
+        if(firstInput == 0) {
+            return 0;
+        }
+        else {
+            return 1;
+        }
     }
 
     public static void startMessage() {
