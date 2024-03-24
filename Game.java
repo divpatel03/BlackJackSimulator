@@ -4,22 +4,24 @@ public class Game{
     public static void main(String[] args) {
         int methodInput = 1;
 
+        //Prompts the user and asks if they want to begin the game
         if(startGame(methodInput) == 0) {
             System.out.println("Game Over");
             System.exit(0);
         }
         else {
-            startMessage();
-        }
-        if(ruleExplanation(methodInput) == 0) {
-            System.out.println("Game Over");
-        }
-        else {
+            //Calling the startMessage method
             startMessage();
         }
 
+        //Calling the ruleExplanation method and asks user if they want to view the rules or not
+        ruleExplanation();
     }
 
+
+
+
+    //Method for asking user if they are ready to start the game
     public static int startGame(int firstInput) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("--------------------------------------");
@@ -37,13 +39,16 @@ public class Game{
         }
     }
 
+    //Starting message displayed to the user
     public static void startMessage() {
         System.out.println("--------------------------------------");
         System.out.println("Welcome to Java BlackJack Version 1.0");
         System.out.println("--------------------------------------");
     }
 
-    public static int ruleExplanation(int ruleInput) {
+    //Asking and display the rules based on user input
+    public static void ruleExplanation() {
+        int ruleInput = 0;
         Scanner ruleScanner = new Scanner(System.in);
         System.out.println("Would you like to see the rules of blackjack?");
         System.out.println("--------------------------------------");
@@ -52,10 +57,20 @@ public class Game{
         ruleInput = ruleScanner.nextInt();  
 
         if(ruleInput == 0) {
-            return 0;
+            return;
         }
-        else {
-            return 1;
-        }
+        System.out.println("--------------------------------------");
+        System.out.println("Object of the Game\r\n" + //
+                        "Each participant attempts to beat the dealer by getting a count as close to 21 as possible, without going over 21.\r\n" + //
+                        "\r\n" + //
+                        "Card Values/scoring\r\n" + //
+                        "It is up to each individual player if an ace is worth 1 or 11. Face cards are 10 and any other card is its pip value.");
+        System.out.println("--------------------------------------");
     }
+
+    public static void initialDealMessage() {
+        System.out.println("We will now deal the cards");
+    }
+
+    
 }
