@@ -1,27 +1,26 @@
 //Owner: Divya Patel, Github: divpatel03
-public class Game extends GameLogic{
+public class Game{
     public static void main(String[] args) {
         int methodInput = 1;
 
+        GamePrint gp1 = new GamePrint();
+        GameLogic gl1 = new GameLogic();
+
         //Prompts the user and asks if they want to begin the game.
-        if(startGame(methodInput) == 0) {
+        if(gp1.startGame(methodInput) == 0) {
             System.out.println("Game Over");
             System.exit(0);
         }
         else {
             //Calling the startMessage method.
-            startMessage();
+            gp1.startMessage();
         }
 
         //Calling the ruleExplanation method and asks user if they want to view the rules or not.
-        ruleExplanation();
+        gp1.ruleExplanation();
 
         //Calling initialDealMessage method to print a statement about the game starting.
-        initialDealMessage();
+        gp1.initialDealMessage();
 
-        //Can use this gameLogic object to call methods from the gameLogic class to play the game.
-        //OR just use the methods directly since it is a subclass of GameLogic.
-        //GameLogic gameLogic = new GameLogic();
-        //gameLogic.hit();
     }
 }
