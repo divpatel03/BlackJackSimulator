@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class GameLogic extends GamePrint{
     public static void main() {
         
