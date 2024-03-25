@@ -1,3 +1,5 @@
+//Owner: Divya Patel, Github: divpatel03
+//Eventually, move all the text methods to another class so this class is just filled with method calls and class objects
 import java.util.Scanner;
 
 public class Game{
