@@ -1,5 +1,17 @@
 public class GameLogic{
     public static void main() {
-        Game game = new Game();
+        
+    }
+
+    public static void startDeal(){ 
+        
+    }
+
+    public static void hit() {
+
+    }
+
+    public static void stand() {
+
     }
 }

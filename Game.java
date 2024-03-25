@@ -16,6 +16,11 @@ public class Game{
 
         //Calling the ruleExplanation method and asks user if they want to view the rules or not
         ruleExplanation();
+
+        initialDealMessage();
+        //Can use this gameLogic object to call methods from the gameLogic class to play the game
+        GameLogic gameLogic = new GameLogic();
+        gameLogic.hit();
     }
 
 
@@ -68,8 +73,10 @@ public class Game{
         System.out.println("--------------------------------------");
     }
 
+    //Initial Deal Message after user passes the rule stage
     public static void initialDealMessage() {
-        System.out.println("We will now deal the cards");
+        System.out.println("We will now deal the cards.");
+        System.out.println("--------------------------------------");
     }
 
     
