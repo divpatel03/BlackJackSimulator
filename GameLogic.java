@@ -1,10 +1,10 @@
-public class GameLogic{
+public class GameLogic extends GamePrint{
     public static void main() {
         
     }
 
     public static void startDeal(){ 
-        
+
     }
 
     public static void hit() {
