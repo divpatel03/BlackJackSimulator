@@ -6,7 +6,7 @@ public class GameLogic{
     }
 
     public static void startDeal(){ 
-
+        
     }
 
     public static void hit() {
