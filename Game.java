@@ -6,7 +6,6 @@ public class Game{
         int methodInput = 1;
 
         GamePrint gp1 = new GamePrint();
-        GameLogic gl1 = new GameLogic();
 
         //Prompts the user and asks if they want to begin the game.
         if(gp1.startGame(methodInput) == 0) {
@@ -24,8 +23,16 @@ public class Game{
         //Calling initialDealMessage method to print a statement about the game starting.
         gp1.initialDealMessage();
         
+        int dealerHand = 0, playerHand = 0;
+
+        GameLogic gl1 = new GameLogic();
+        GameLogic gl2 = new GameLogic();
+        
+        gl1.startDeal(dealerHand);
+        gl2.startDeal(playerHand);
+        
         int returnCard; 
 
-        
+
     }
 }
