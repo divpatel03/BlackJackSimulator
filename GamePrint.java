@@ -64,4 +64,18 @@ public class GamePrint {
         System.out.println("--------------------------------------");
         System.out.println();
     }
+
+    public int hitOrStand() {
+        int selection;
+        Scanner hitOrStand = new Scanner(System.in);
+        System.out.println("--------------------------------------");
+        System.out.println("Hit Or Stand?");
+        System.out.println("--------------------------------------");
+        System.out.println("Enter 1 for Hit || Enter 0 for Stand");
+        System.out.println("--------------------------------------");
+        selection = hitOrStand.nextInt();  
+        System.out.println();
+
+        return selection;
+    }
 }

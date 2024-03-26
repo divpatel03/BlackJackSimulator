@@ -26,14 +26,21 @@ public class Game{
         int dealerHand = 0, playerHand = 0;
         int dealerCardValue = 0;
         int playerHandValue = 0;
+        int hitOrStandValue = 0;
 
         GameLogic gl1 = new GameLogic();
 
-        gl1.dealerStartDeal(dealerHand, dealerCardValue);
-        gl1.playerStartDeal(playerHand, playerHandValue);
-        
-        int returnCard; 
+        dealerHand = gl1.dealerStartDeal(dealerHand, dealerCardValue);
+        playerHand = gl1.playerStartDeal(playerHand, playerHandValue);
 
+        hitOrStandValue = gp1.hitOrStand();
+        if(hitOrStandValue == 1) {
+            playerHand += gl1.hit(playerHandValue);
+            System.out.println("Player Hand Total: " +playerHand);
+        }
+        else {
+            gl1.stand();
+        }
 
     }
 }

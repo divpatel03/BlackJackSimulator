@@ -37,10 +37,13 @@ public class GameLogic{
 
     public int hit(int hitCard) {
         Random random = new Random();
-        return random.nextInt(11) + 1;
+        hitCard = random.nextInt(11) + 1;
+        System.out.println("Hit, card value: " +hitCard);
+        return hitCard;
     }
 
     public static int stand() {
+        System.out.println("Stand, dealer will now draw cards.");
         return 0;
     }
 }
