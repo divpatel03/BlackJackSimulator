@@ -49,7 +49,9 @@ public class GamePrint {
                         "\r\n" + //
                         "Card Values/scoring\r\n" + //
                         "It is up to each individual player if an ace is worth 1 or 11. Face cards are 10 and any other card is its pip value.");
-        System.out.println("Ready to Go");
+        System.out.println();
+        System.out.println("--------------------------------------");
+        System.out.println("Game Starting...");
         System.out.println("--------------------------------------");
         System.out.println();
     }
@@ -57,7 +59,7 @@ public class GamePrint {
     //Initial Deal Message after user passes the rule stage
     public static void initialDealMessage() {
         System.out.println("--------------------------------------");
-        System.out.println("We will now deal the cards.");
+        System.out.println("The cards will now be dealt.");
         System.out.println("--------------------------------------");
         System.out.println();
     }
