@@ -24,6 +24,8 @@ public class Game{
         //Calling initialDealMessage method to print a statement about the game starting.
         gp1.initialDealMessage();
         
+        int returnCard; 
+
         
     }
 }
