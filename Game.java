@@ -24,12 +24,13 @@ public class Game{
         gp1.initialDealMessage();
         
         int dealerHand = 0, playerHand = 0;
+        int dealerCardValue = 0;
+        int playerHandValue = 0;
 
         GameLogic gl1 = new GameLogic();
-        GameLogic gl2 = new GameLogic();
-        
-        gl1.startDeal(dealerHand);
-        gl2.startDeal(playerHand);
+
+        gl1.dealerStartDeal(dealerHand, dealerCardValue);
+        gl1.playerStartDeal(playerHand, playerHandValue);
         
         int returnCard; 
 
