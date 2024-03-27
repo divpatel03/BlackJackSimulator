@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class GamePrint {
     //Method for asking user if they are ready to start the game
-    public static int startGame(int firstInput) {
+    public int startGame(int firstInput) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("--------------------------------------");
         System.out.println("Would you like to begin?");
@@ -13,15 +13,17 @@ public class GamePrint {
         firstInput = scanner.nextInt();  
 
         if(firstInput == 0) {
+            scanner.close();
             return 0;
         }
         else {
+            scanner.close();
             return 1;
         }
     }
 
     //Starting message displayed to the user
-    public static void startMessage() {
+    public void startMessage() {
         System.out.println("--------------------------------------");
         System.out.println("Welcome to Java BlackJack Version 1.0");
         System.out.println("--------------------------------------");
@@ -29,7 +31,7 @@ public class GamePrint {
     }
 
     //Asking and display the rules based on user input
-    public static void ruleExplanation() {
+    public void ruleExplanation() {
         int ruleInput = 0;
         Scanner ruleScanner = new Scanner(System.in);
         System.out.println("--------------------------------------");
@@ -41,6 +43,7 @@ public class GamePrint {
         System.out.println();
 
         if(ruleInput == 0) {
+            ruleScanner.close();
             return;
         }
         System.out.println("--------------------------------------");
@@ -55,10 +58,11 @@ public class GamePrint {
         System.out.println("Game Starting...");
         System.out.println("--------------------------------------");
         System.out.println();
+        ruleScanner.close();
     }
 
     //Initial Deal Message after user passes the rule stage
-    public static void initialDealMessage() {
+    public void initialDealMessage() {
         System.out.println("--------------------------------------");
         System.out.println("The cards will now be dealt.");
         System.out.println("--------------------------------------");
@@ -75,7 +79,7 @@ public class GamePrint {
         System.out.println("--------------------------------------");
         selection = hitOrStand.nextInt();  
         System.out.println();
-
+        hitOrStand.close();
         return selection;
     }
 }
