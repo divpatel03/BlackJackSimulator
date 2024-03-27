@@ -39,6 +39,7 @@ public class Game{
             System.out.println("Player Hand Total: " +playerHand);
         }
         else {
+            System.out.println("Player Hand Total: " +playerHand);
             gl1.stand();
         }
 
