@@ -66,10 +66,27 @@ public class Game{
             }
         }
 
-        //If stand is chosen, then deal cards to the dealer
-        if(hitOrStandValue == 0) {
-            
+        // If stand is chosen, then deal cards to the dealer
+        if (hitOrStandValue == 0) {
+            // Deal cards to the dealer until their hand value is 17 or higher
+            while (dealerHand < 17) {
+                dealerHand += gl1.hit(dealerCardValue);
+            }
+
+            // Display the final hand totals
+            System.out.println("Player Hand Total: " + playerHand);
+            System.out.println("Dealer Hand Total: " + dealerHand);
+
+            // Determine the outcome of the game
+            if (dealerHand > 21 || dealerHand < playerHand) {
+                System.out.println("You Won!");
+            } else if (dealerHand > playerHand) {
+                System.out.println("You Lost!");
+            } else {
+                System.out.println("It's a tie!");
+            }
         }
+
 
     }
 }
