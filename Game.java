@@ -1,6 +1,4 @@
 //Owner: Divya Patel, Github: divpatel03
-import java.util.ArrayList;
-
 public class Game{
     public static void main(String[] args) {
         int methodInput = 1;
@@ -41,8 +39,6 @@ public class Game{
         //Running hit or stand method and asking the user wheter they want to hit/stand
         hitOrStandValue = gp1.hitOrStand();
         
-        // Assume hitOrStandValue is set before entering the loop
-
         while (playerHand < 21) {
             //If player decides to hit
             if (hitOrStandValue == 1) {
@@ -70,6 +66,7 @@ public class Game{
             }
         }
 
+        //If stand is chosen, then deal cards to the dealer
         if(hitOrStandValue == 0) {
             
         }

@@ -42,7 +42,7 @@ public class GameLogic{
         return hitCard;
     }
 
-    public static int stand() {
+    public int stand() {
         System.out.println("Stand, dealer will now draw cards.");
         return 0;
     }
