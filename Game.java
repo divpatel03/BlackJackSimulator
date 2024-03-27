@@ -22,7 +22,8 @@ public class Game{
         gp1.initialDealMessage();
         
         //Declaring variables for the dealer and player's cards
-        int dealerHand = 0, playerHand = 0;
+        int dealerHand = 0;
+        int playerHand = 0;
         int dealerCardValue = 0;
         int playerHandValue = 0;
         int hitOrStandValue = 0;
@@ -77,16 +78,18 @@ public class Game{
             System.out.println("Player Hand Total: " + playerHand);
             System.out.println("Dealer Hand Total: " + dealerHand);
 
-            // Determine the outcome of the game
+            //If the dealer busts, display win message
             if (dealerHand > 21 || dealerHand < playerHand) {
-                System.out.println("You Won!");
-            } else if (dealerHand > playerHand) {
+                System.out.println("Dealer Bust, You Won!");
+            } 
+            //If the dealer draw's a card and the total is higher than the player card, display lost message
+            else if (dealerHand > playerHand) {
                 System.out.println("You Lost!");
-            } else {
+            } 
+            //If the dealer draw's a card and ties with the player
+            else {
                 System.out.println("It's a tie!");
             }
         }
-
-
     }
 }
