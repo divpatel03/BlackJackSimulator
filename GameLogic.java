@@ -3,10 +3,10 @@ import java.util.Random;
 public class GameLogic{
     public int dealerStartDeal(int startHand, int cardValue){ 
         Random randomStart = new Random();
-        cardValue = randomStart.nextInt(11) + 1;
+        cardValue = randomStart.nextInt(10) + 1;
         System.out.println("Dealer's First Card: Hidden");
         startHand = cardValue;
-        cardValue = randomStart.nextInt(11) + 1;
+        cardValue = randomStart.nextInt(10) + 1;
         System.out.println("Dealer's Second Card: "+cardValue);
         System.out.println();
         startHand += cardValue;
@@ -21,10 +21,10 @@ public class GameLogic{
 
     public int playerStartDeal(int startHand, int cardValue){ 
         Random randomStart = new Random();
-        cardValue = randomStart.nextInt(11) + 1;
+        cardValue = randomStart.nextInt(10) + 1;
         System.out.println("Player's First Card: "+cardValue);
         startHand = cardValue;
-        cardValue = randomStart.nextInt(11) + 1;
+        cardValue = randomStart.nextInt(10) + 1;
         System.out.println("Player's Second Card: "+cardValue);
         startHand += cardValue;
 
@@ -37,7 +37,7 @@ public class GameLogic{
 
     public int hit(int hitCard) {
         Random random = new Random();
-        hitCard = random.nextInt(11) + 1;
+        hitCard = random.nextInt(10) + 1;
         System.out.println("Hit, card value: " +hitCard);
         return hitCard;
     }
