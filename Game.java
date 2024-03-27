@@ -44,6 +44,9 @@ public class Game{
         //If player decides to hit
         if(hitOrStandValue == 1) {
             playerHand += gl1.hit(playerHandValue);
+            if(playerHand == 21) {
+                System.out.println("21! You Won!");
+            }
         }
         //If player decides to stand
         else {
