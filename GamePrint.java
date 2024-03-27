@@ -13,11 +13,9 @@ public class GamePrint {
         firstInput = scanner.nextInt();  
 
         if(firstInput == 0) {
-            scanner.close();
             return 0;
         }
         else {
-            scanner.close();
             return 1;
         }
     }
@@ -43,7 +41,6 @@ public class GamePrint {
         System.out.println();
 
         if(ruleInput == 0) {
-            ruleScanner.close();
             return;
         }
         System.out.println("--------------------------------------");
@@ -58,7 +55,6 @@ public class GamePrint {
         System.out.println("Game Starting...");
         System.out.println("--------------------------------------");
         System.out.println();
-        ruleScanner.close();
     }
 
     //Initial Deal Message after user passes the rule stage
@@ -79,7 +75,6 @@ public class GamePrint {
         System.out.println("--------------------------------------");
         selection = hitOrStand.nextInt();  
         System.out.println();
-        hitOrStand.close();
         return selection;
     }
 }
