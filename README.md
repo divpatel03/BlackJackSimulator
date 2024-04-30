@@ -1,3 +1,5 @@
+Java Blackjack Simulator 
+
 Blackjack Game Version 1.0 
 Owner: Divya Patel
 
